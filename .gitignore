@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+www/
+
+# Android
+android/build/
+android/.gradle/
+android/app/build/
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.plugins.json
+
+# iOS
+ios/App/App/public/
+ios/App/Pods/
+ios/App/.build/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+Thumbs.db
+
+# Security & Secrets
+keys.jks
+*.keystore
+.env
+
+# Built APKs (since we want to keep them out of source control and use Releases)
+*.apk

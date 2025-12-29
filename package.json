@@ -1,0 +1,21 @@
+{
+    "name": "smart-budget-app",
+    "version": "1.0.0",
+    "description": "Smart Budget Manager Mobile App",
+    "main": "index.js",
+    "scripts": {
+        "build": "echo 'No build step needed for vanilla JS'",
+        "start": "npx cap serve"
+    },
+    "dependencies": {
+        "@capacitor/android": "^5.0.0",
+        "@capacitor/core": "^5.0.0",
+        "@capacitor/filesystem": "^5.2.2",
+        "@capacitor/ios": "^5.7.8",
+        "@capacitor/local-notifications": "^5.0.8",
+        "@capacitor/share": "^5.0.8"
+    },
+    "devDependencies": {
+        "@capacitor/cli": "^5.0.0"
+    }
+}
