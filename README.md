@@ -1,83 +1,83 @@
-# Smart Budget Manager - Mobile App
+# 🥗 Smart Budget Manager
+### *Eat Smart, Save Smarter - The AI-Powered Meal Budgeting Companion*
 
-## ✅ APK Successfully Built!
+[![GitHub Release](https://img.shields.io/github/v/release/zeehadzeeshan/SafeSpend_app?style=flat-square)](https://github.com/zeehadzeeshan/SafeSpend_app/releases)
+[![Build Status](https://img.shields.io/badge/Build-Capacitor-blue?style=flat-square)](https://capacitorjs.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-**Location:** `android/app/build/outputs/apk/release/app-release-unsigned.apk`  
-**Size:** 2.75 MB
-
----
-
-## 📱 Installation Instructions
-
-### Option 1: Install Unsigned APK (For Testing)
-
-1. Transfer the APK to your Android device
-2. Enable "Install from Unknown Sources" in Settings
-3. Open the APK file and install
-
-### Option 2: Sign the APK (Recommended for Distribution)
-
-To create a signed APK for the Play Store or wider distribution:
-
-```bash
-# Generate a keystore (one-time setup)
-keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
-
-# Sign the APK
-jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA-256 -keystore my-release-key.keystore android/app/build/outputs/apk/release/app-release-unsigned.apk my-key-alias
-
-# Align the APK (optional but recommended)
-zipalign -v 4 android/app/build/outputs/apk/release/app-release-unsigned.apk SmartBudget-signed.apk
-```
+Smart Budget Manager is a mobile application built with Capacitor that helps users manage their daily meal expenses without sacrificing health. In an era of rising costs, the app uses intelligent algorithms to suggest balanced, protein-rich Bangladeshi meals tailored to your specific budget.
 
 ---
 
-## 🛠️ Rebuilding the APK
+## 🚀 The Problem It Solves
 
-To rebuild after making changes to the web app:
+Maintaining a healthy diet on a strict budget is a complex balancing act. Many people struggle with:
+- **Financial Overspending:** Spending too much on one meal and starving on the next.
+- **Decision Fatigue:** Struggling to decide what to eat everyday.
+- **Unhealthy Choices:** Often, cheap food means low protein and high carbs.
+
+**Smart Budget Manager** solves this by automating the math. It splits your daily budget intelligently, ensures "heavy" meals (like dinner) get priority, and suggest specific, local meal options that provide the best nutritional value for your money.
+
+---
+
+## ✨ Key Features
+
+### 🧠 AI-Driven Meal Suggestions
+*   **Bangladeshi Context:** A built-in database of 18 culturally appropriate healthy meals.
+*   **Protein-to-Price Optimization:** Suggestions priority meals with the best protein ratio.
+*   **Unique Meal Logic:** Ensures you never get the same suggestion twice in a day.
+*   **Dinner Priority (Vari Khabar):** Automatically allocates more resources and "heaviness" to dinner.
+
+### 💰 Intelligent Budgeting
+*   **20/40/40 Split:** Dynamic allocation across Breakfast, Lunch, and Dinner.
+*   **Smart Rebalancing:** If your budget is critically low, the app automatically skips less essential meals (like breakfast) to ensure you can afford a proper lunch and dinner.
+*   **Minimum Thresholds:** Prevents unrealistic suggestions that wouldn't cover the cost of a basic meal.
+
+### 📋 Personalized Menu Management
+*   **Custom Items:** Add your own favorite meals with their local prices.
+*   **Persistence:** All your menu data and budgets are saved locally on your device.
+
+---
+
+## 🛠️ Technical Stack
+
+- **Platform:** [Capacitor 5](https://capacitorjs.com/) (Web-to-Native framework)
+- **Frontend:** Pure HTML5, Vanilla JavaScript, and CSS3
+- **Logic:** Custom localized decision-making algorithms
+- **Storage:** Web Storage API (LocalStorage) for offline-first performance
+- **UI Design:** Premium "Slate & Sky" dark mode aesthetic
+
+---
+
+## 📱 Installation & Setup
+
+### 📥 Download APK
+You can download the latest **SafeSpend_Debug.apk** from the [GitHub Releases](https://github.com/zeehadzeeshan/SafeSpend_app/releases) page.
+
+1.  Transfer the APK to your Android device.
+2.  Allow "Installation from Unknown Sources" in your settings.
+3.  Open and install.
+
+### ⚙️ Development & Rebuilding
+If you wish to modify the app and rebuild it:
 
 ```bash
-# Run the build script
-build_apk.bat
-```
-
-Or manually:
-
-```bash
+# Install dependencies
 npm install
+
+# Sync changes to Android/iOS projects
 npx cap sync
+
+# Build Android APK (requires Android SDK)
 cd android
-gradlew.bat assembleRelease
+./gradlew.bat assembleDebug
 ```
 
 ---
 
-## 📋 Features Implemented
+## 🔗 Project Links
 
-✅ **Budget Initialization** - Set total budget and days  
-✅ **Smart Budget Splitting** - 20/40/40 rule (Breakfast/Lunch/Dinner)  
-✅ **Minimum Thresholds** - Ensures realistic meal budgets  
-✅ **Menu Manager** - Add/remove custom menu items  
-✅ **AI Meal Suggestions** - Local algorithm picks best items from your menu  
-✅ **Daily Spending Log** - Track expenses and update budget  
-✅ **Data Persistence** - Uses LocalStorage (survives app restarts)  
-✅ **Premium Dark UI** - Slate/Sky color scheme matching Desktop app
+- **Main Repository:** [GitHub](https://github.com/zeehadzeeshan/SafeSpend_app)
+- **Issue Tracker:** [Report Bugs](https://github.com/zeehadzeeshan/SafeSpend_app/issues)
 
----
-
-## 🔧 Technical Stack
-
-- **Framework:** Capacitor 5 (Web-to-Native)
-- **Frontend:** Vanilla HTML/CSS/JavaScript
-- **Storage:** LocalStorage API
-- **Build:** Gradle 8.7 + Android SDK 33
-- **Min Android:** API 22 (Android 5.1+)
-
----
-
-## 📝 Notes
-
-- The APK is **unsigned** by default - suitable for personal testing
-- For production, sign the APK with your own keystore
-- The app works 100% offline (no internet required after installation)
-- All budget calculations match the Desktop Python app exactly
+Developed with ❤️ for health-conscious budgeters.
